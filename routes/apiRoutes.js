@@ -10,12 +10,9 @@ router.get('/notes', (req, res) => {
 router.post("/notes", (req, res) => {
     const { title, text } = req.body;
     const newNote = { title, text };
-    writeToFile("./db/db.json", newNote);
+    return res.json(readAndAppend(newNote, "./db/db.json"));
   });
 
-router.delete('/notes', (req,res)=>{
-readAndAppend('./db/db.json').then((data) => res.json(JSON.parse(data)) )
-});
-
+ 
 
 module.exports = router;
