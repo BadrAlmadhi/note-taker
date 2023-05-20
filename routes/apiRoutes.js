@@ -14,12 +14,7 @@ router.post("/notes", (req, res) => {
   });
 
   router.delete("/notes/:id", (req, res) => {
-    fetch(`/api/notes/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)) )
   });
  
 
