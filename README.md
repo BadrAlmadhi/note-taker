@@ -24,7 +24,6 @@ I have learned about the backend that should include a db.json file that stores 
 
 - [installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
 
 ## Installation 
